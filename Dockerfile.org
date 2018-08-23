@@ -1,0 +1,28 @@
+FROM php:7.2.4-apache
+
+RUN requirements="vim libpng-dev libmcrypt-dev libmcrypt4 libcurl3-dev libxml2-dev libfreetype6 libjpeg62-turbo libfreetype6-dev libjpeg62-turbo-dev curl"
+RUN apt-get update && apt-get install -y --no-install-recommends $requirements && rm -rf /var/lib/apt/lists/*
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ 
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install pdo pdo_mysql
+RUN echo '\n'|pecl install mcrypt-1.0.1 && docker-php-ext-enable mcrypt
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install soap
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+RUN docker-php-ext-install iconv pcntl zip curl bcmath opcache simplexml xmlrpc xml session readline pspell ldap pdo_pgsql
+RUN docker-php-ext-enable iconv mcrypt gd pdo_mysql pdo_pgsql pcntl pdo_sqlite zip curl bcmath opcache simplexml xmlrpc xml soap session readline pspell ldap mbstring 
+RUN requirementsToRemove="libpng-dev libmcrypt-dev libcurl3-dev libxml2-dev libfreetype6-dev libjpeg62-turbo-dev" \
+&& apt-get purge --auto-remove -y $requirementsToRemove
+RUN pecl install redis-4.0.1 \
+    && pecl install xdebug-2.6.0 \
+    && docker-php-ext-enable redis xdebug
+
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ssl-cert-snakeoil.key -out /etc/ssl/certs/ssl-cert-snakeoil.pem -subj "/C=AT/ST=Vienna/L=Vienna/O=Security/OU=Development/CN=example.com"
+
+RUN a2enmod rewrite
+RUN a2ensite default-ssl
+RUN a2enmod ssl
+
+EXPOSE 80
+EXPOSE 443
+
