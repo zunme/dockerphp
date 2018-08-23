@@ -17,7 +17,7 @@ db:
   restart: always
   container_name: php728_db_1
   volumes:
-    - ./mysql:/var/lib/mysql
+    - ./mysqldata:/var/lib/mysql
   environment:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_USER: admin
