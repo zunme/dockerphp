@@ -1,0 +1,219 @@
+   51  docker run -d --volume /emby/programdata:/config  --volume /emby/share1:/mnt/share1   --volume /emby/share2:/mnt/share2    --device /dev/dri/renderD128     --publish 8096:8096     --publish 8920:8920     --env UID=1000     --env GID=100     --env GIDLIST=44     emby/embyserver:latest
+   81  docker ps
+   82  docker fund2 start
+   83  docker start fund2
+   84  docker start emby
+   87  docker ps -a
+   90  docker ps -a
+   91  docker ps
+   92  docker start transmission
+  144  docker ps -a
+  160  docker restart transmission
+  161  docker -a
+  162  docker ps -a
+  163  docker restart transmission
+  178  docker ps -a
+  179  docker start fund2
+  180  docker ps -a
+  182  docker start emby
+  183  docker start transmission
+  187  docker pull node
+  221  wget https://github.com/celsocelante/docker-lamp/archive/master.zip
+  224  cd docker-lamp-master/
+  225  docker-compose up -d
+  226  apt install docker-compose
+  227  sudo apt install docker-compose
+  228  docker-compose up -d
+  229  docker ps -a
+  236  docker-compose stop
+  237  vi docker-compose.yml 
+  238  docker ps -a
+  239  docker rm 1c38d7c695a3
+  240  docker rm e82b90b38f48
+  241  docker-compose up -d
+  242  vi docker-compose.yml 
+  243  docker-compose stop
+  244  docker ps -a
+  245  docker rm 95450528178e
+  246  docker rm e44408f23a20
+  247  docker-compose up -d
+  248  docker ps -a
+  249  docker start transmission
+  250  docker start emby
+  251  docker start fund2
+  253  docker ps -a
+  254  attach dockerlampmaster_web_1
+  255  docker ps -a
+  256  docker restart 33f660dbe33c
+  258  docker ps -a
+  260  docker ps -a
+  261  docker restart dockerlampmaster_web_1
+  262  docker ps -a
+  263  docker start 33f660dbe33c
+  264  docker ps -a
+  265  docker rm 33f660dbe33c
+  267  vi docker-compose.yml 
+  268  docker-compose up -d
+  269  docker ps -a
+  271  vi docker-compose.yml 
+  273  vi docker-compose.yml 
+  275  docker ps -a
+  278  vi docker-compose.yml 
+  280  docker ps -a
+  281  docker restart 9259679d4be4
+  282  docker ps -a
+  283  vi docker-compose.yml 
+  286  vi docker-compose.yml 
+  290  docker ps -a
+  297  docker ps -a
+  298  docker start 9259679d4be4
+  299  docker ps -a
+  300  docker stop 9259679d4be4
+  301  docker ps -a
+  305  docker ps -a
+  306  attach dockerlampmaster_db_1
+  307  docker ps -a
+  311  cd docker-lamp-master/
+  313  vi docker-compose.yml 
+  314  docker ps -a
+  315  docker rm 9259679d4be4
+  318  docker-compose up -d
+  321  docker ps -a
+  322  attach dockerlampmaster_web_1
+  323  docker restart dockerlampmaster_web_1
+  324  docker ps -a
+  325  attach dockerlampmaster_web_1
+  326  docker restart dockerlampmaster_web_1
+  327  docker ps -a
+  330  wget https://github.com/nezhar/php-docker-ssl/archive/master.zip
+  333  cd php-docker-ssl-master/
+  336  docker ps- a
+  337  docker ps -a
+  338  docker rm dockerlampmaster_web_1
+  342  cd docker-lamp-master/
+  346  docker ps -a
+  347  attach dockerlampmaster_web_1
+  348  docker restart  dockerlampmaster_web_1
+  349  attach dockerlampmaster_web_1
+  350  docker restart  dockerlampmaster_web_1
+  351  attach dockerlampmaster_web_1
+  352  docker restart  dockerlampmaster_web_1
+  353  attach dockerlampmaster_web_1
+  355  attach dockerlampmaster_web_1
+  364  vi docker-compose.yml 
+  367  cd php-docker-ssl-master/
+  369  vi docker-compose.yml 
+  371  cd docker-lamp-master/
+  373  vi docker-compose.yml 
+  378  docker ps -a
+  379  docker rm zealous_goldstine
+  380  attach dockerlampmaster_web_1
+  384  docker ps -a
+  385  docker rm sharp_shockley
+  386  docker rm dockerlampmaster_web_1
+  387  docker stop dockerlampmaster_web_1
+  388  docker rm dockerlampmaster_web_1
+  389  vi docker-compose.yml 
+  391  attach dockerlampmaster_web_1
+  392  docker restart  dockerlampmaster_web_1
+  393  attach dockerlampmaster_web_1
+  396  attach dockerlampmaster_web_1
+  402  echo "" > docker-compose.yml 
+  403  vi docker-compose.yml 
+  404  docker ps -a
+  405  docker stop dockerlampmaster_web_1
+  406  docker rm dockerlampmaster_web_1
+  412  docker ps -a
+  413  docker stop keen_ramanujan
+  414  docker rm keen_ramanujan
+  416  docker ps -a
+  417  docker stop quizzical_bose
+  418  docker rm quizzical_bose
+  419  vi docker-compose.yml 
+  422  docker stop webservice1
+  423  docker rm webservice1
+  426  vi docker-compose.yml 
+  428  docker ps -a
+  429  docker rm romantic_curran
+  434  docker build .
+  435  docker build
+  436  docker build ./
+  437  docker ps -a
+  438  docker rm reverent_banach
+  439  vi docker-compose.yml 
+  442  docker build ./
+  443  sudo docker build .
+  444  which docker-php-ext-configure
+  445  where  docker-php-ext-configure
+  446  docker ps
+  447  docker ps -a
+  448  docker stop webservice1
+  449  docker rm webservice1
+  451  vi docker-compose.yml 
+  454  docker restart webservice1
+  509  docker restart fund2
+  511  docker restart fund2
+  513  docker ps -a
+  544  mkdir dockeradd
+  545  cd docker add
+  546  cd dockeradd
+  548  docker ./
+  552  docker build -t authy-php ./
+  553  docker -ps a
+  554  docker ps -a
+  555  docker images
+  556  history |grep docker
+  557  docker ps -a
+  559  docker run -v $(shell pwd):/home/authy-php authy-php composer update
+  565  docker -ps a
+  566  docker ps -a
+  568  docker start fund2
+  569  docker start transmission
+  570  docker start emby
+  571  docker ps -a
+  573  docker ps -a
+  577  cd php-docker-ssl-master/
+  579  vi docker-compose.yml 
+  581  cd docker-lamp-master/
+  583  vi docker-compose.yml 
+  646  docker images
+  647  history |grep docker
+  659  docker ps -a
+  660  docker rm authy-php
+  661  docker ps -a
+  662  docker rm 05bc53ddab8c
+  663  docker rm 3146918b46d9
+  664  docker ps -a
+  665  docker pull naqoda/centos-apache-php:php53
+  666  docker pull centos5
+  667  docker login
+  669  mkdir docker
+  672  docker ps -a
+  674  docker ps -a
+  675  docker ps
+  676  docker start fund2
+  678  docker ps -a
+  679  docker start transmission
+  680  docker start emby
+  685  cd /data/docker
+  688  mkdir docker72
+  689  chmod 777 docker72
+  690  cd docker
+  700  docker .
+  701  docker build ./
+  703  docker build ./
+  705  docker build ./
+  707  docker build ./
+  709  docker build ./
+  710  history |grep docker
+  715  cd php-docker-ssl-master/
+  719  cd docker-lamp-master/
+  726  docker build ./
+  727  docker build
+  728  docker build .
+  729  docker build Dockerfile
+  730  ll /data/docker
+  731  cd /data/docker
+  732  docker build .
+  734  docker build .
+  741  history|grep docker > history

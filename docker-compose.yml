@@ -1,0 +1,27 @@
+web:
+   #image: php:7.2.4-apache
+   build: .
+   container_name: php728 
+   environment:
+     - ALLOW_OVERRIDE=true
+   ports:
+     - "8080:80"
+     - "8043:443"
+   links:
+     - db
+   volumes:
+     - /data/docker/app:/var/www/html/
+
+db:
+  image: mariadb
+  restart: always
+  container_name: php728_db_1
+  volumes:
+    - ./mysql:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: test
+    MYSQL_DATABASE: database
+  ports:
+    - "3336:3306"
